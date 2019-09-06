@@ -1,0 +1,17 @@
+Project Name : Inventory Management System
+Team member : 2
+Duration : 4-6 weeks
+
+[First Member :-]
+Name : Neha Pandey
+Order ID : 279832
+Course : ICT-IITK Python_Summer_Training
+Batch : 2k19
+College : University Institute of Engineering & Technology, C.S.J.M University Campus, Kanpur.
+
+[Second Member :-]
+Name : Prashant Kumar Tiwari
+Order ID : 279836
+Course : ICT-IITK Python_Summer_Training
+Batch : 2k19
+College : University Institute of Engineering & Technology, C.S.J.M University Campus, Kanpur.

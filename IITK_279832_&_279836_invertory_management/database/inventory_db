@@ -1,0 +1,32 @@
+#----------------------Manually created using MYSQL Database
+create databases inventory_db
+
+#----------------------Tables Automatically created by program
+create table if not exists product(productID int(5) PRIMARY KEY,productName varchar(30), purchasePrice int(6), salePrice decimal(8,2), productQty int(5))
+create table if not exists sale(saleid int(5),productID int(5), price decimal(8,2), date date, saleQty int(5), FOREIGN KEY (productID) REFERENCES product(productID))
+
+#----------------------inserted by program
+insert into product values(501,'Dell PC',35000,40000,30)
+insert into product values(502,'Acer PC',35000,38000,30)
+insert into product values(502,'Sony TV',45000,50000,50)
+insert into product values(502,'i- Ball',29000,32000,20)
+insert into sale values(601,501,40000,'2019-02-12',3)
+insert into sale values(602,502,38000,'2019-02-12',3)
+insert into sale values(603,503,50000,'2019-03-08',20)
+insert into sale values(604,504,32000,'2019-05-20',15)
+
+#------------------------operations performed by menu driven program
+select productName from product where productName = "xyz"
+select productQty from product where productName = "xyz"
+update product set productQty = productQty + 0000 where productName = "xyz"
+select * from product, sale where product.productID = sale.productID
+insert into product values(0000,"xyz",0000,00.00,00)
+select * from product
+select productName from product where productName = "xyz"
+delete from product where productName = "xyz"
+insert into sale values(0000,0000,00.00,"yyyy-mm-dd",00)
+update product set productQty = productQty - 00 where productID=00
+select saleid from sale where saleid = 000
+update sale SET saleQty=saleQty + 00, price=0000 where saleid = 000
+update product, sale SET productQty = productQty - 00 where product.productID=sale.productID and saleid = 000
+select salePrice, purchasePrice, saleQty, productName from product, sale where product.productID = sale.productID

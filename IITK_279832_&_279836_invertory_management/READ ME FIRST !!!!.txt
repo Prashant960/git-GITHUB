@@ -1,0 +1,14 @@
+INVENTORY MANAGEMENT SYSTEM
+
+LOGIN DETAILS
+
+Username - admin
+Password - 1234
+
+Note : 
+*)This Project Work console based source code and is specially designed on Linux Terminal.
+*)To run this project on any platform , the terminal should have "FIGLET" AND "TOILET" package preinstalled.
+*)The database used to store inventory data is MYSQL SERVER for there is a sample "inventory.txt" file for showing the queries used.
+
+Project made by Neha Pandey and Prashant Tiwari.
+Thankyou
