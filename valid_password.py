@@ -1,3 +1,4 @@
+import time
 def validate(password):
     pwd_rule = {'num': 0, 'upp': 0, 'low': 0, 'spe': 0}
     if password == '' or password == ' ':
@@ -21,5 +22,6 @@ def validate(password):
 
 print('# Password rules : \n-atleast one upper,\n-one lower,\n-one number and\n-one special character except space')
 password = input('Enter the password : ')
+t1 = time.perf_counter()
 print(validate(password))
-
+print(f'\nTime Taken : {time.perf_counter() - t1}')
