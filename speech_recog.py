@@ -5,9 +5,10 @@ def searchItem(obj,url):
     obj = sr.Recognizer()
 #    url = 'https://data-flair.training/blogs/{}-tutorials-home/'
     with sr.Microphone() as source:
+        obj.adjust_for_ambient_noise(source, duration=5)
         print("\nSearch the items :")
         print('\n[ SPEAK ] : ',end=' ')
-        audio = obj.listen(source)
+        audio = obj.listen(source, timeout=5)
 
         try:
             get = obj.recognize_google(audio)
@@ -23,10 +24,12 @@ r1 = r2 = r3 = sr.Recognizer()
 #r3 = sr.Recognizer()
 
 with sr.Microphone() as source:
+    print('PLease wait. Calibrating microphone....')
+    r3.adjust_for_ambient_noise(source, duration=5)
     print("\n\nAction :\n -> Text\n-> Videos")
     print("\n[ SPEAK ] : ",end=' ')
-    audio = r3.listen(source)
-#    print("Your spoke : {}".format(r3.recognize_google(audio)))
+    audio = r3.listen(source, timeout=5)
+    print("{}".format(r3.recognize_google(audio)))
 
     if "text" in r2.recognize_google(audio):
         url = 'https://data-flair.training/blogs/{}-tutorials-home/'
